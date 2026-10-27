@@ -27,7 +27,7 @@ YOUTUBE_CHANNEL_ID=UCxxxxxxxx npm run dev   # http://localhost:3000
 ## Deploy to Railway
 
 1. New project **techygondal** → New → GitHub Repo → `techygondal`.
-2. Settings → Root Directory: `apps/web`, Config file path: `/apps/web/railway.json`.
+2. Settings → Root Directory: `apps/web`; build `npm run build`, start `npm run start`, watch path `/apps/web/**`, healthcheck `/` (mirrors `apps/web/railway.json`; Railway no longer accepts config as code on new services).
 3. Variables: `YOUTUBE_CHANNEL_ID` (the id starting with `UC`, from YouTube Studio → Settings → Channel → Advanced settings) and `NEXT_PUBLIC_SITE_URL=https://techygondal.com`.
 4. Settings → Networking: add custom domains `techygondal.com` and `www.techygondal.com`, then add the DNS records Railway shows at your registrar.
 
