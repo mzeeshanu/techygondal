@@ -29,10 +29,12 @@ export function VideoGrid({ videos }: { videos: Video[] }) {
               className="aspect-video w-full rounded-xl border border-line object-cover group-hover:border-racing"
             />
             <h3 className="mt-3 font-bold leading-snug group-hover:text-racing">{v.title}</h3>
-            {v.published && (
+            {v.published ? (
               <p className="mt-1 text-sm text-muted">
                 <time dateTime={v.published}>{dateFormat.format(new Date(v.published))}</time>
               </p>
+            ) : (
+              v.ago && <p className="mt-1 text-sm text-muted">{v.ago}</p>
             )}
           </a>
         </li>

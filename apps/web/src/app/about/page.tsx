@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { TgMark } from "@/components/TgMark";
+import { SocialLinks } from "@/components/Socials";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = { title: "About" };
@@ -20,20 +21,9 @@ export default function AboutPage() {
         </a>
         .
       </p>
-      <ul className="mt-8 flex flex-wrap gap-3 text-sm font-semibold">
-        {[
-          ["YouTube", site.links.youtube],
-          ["Instagram", site.links.instagram],
-          ["TikTok", site.links.tiktok],
-          ["GitHub", site.links.github],
-        ].map(([label, href]) => (
-          <li key={label}>
-            <a href={href} className="inline-block rounded-md border border-line px-4 py-2 hover:border-racing">
-              {label}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <div className="mt-8">
+        <SocialLinks />
+      </div>
     </div>
   );
 }

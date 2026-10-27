@@ -14,5 +14,6 @@
 
 ## Phase 3: Audience
 - [ ] Newsletter sign up
-- [ ] Shorts and TikTok highlights section
+- [x] Shorts and playlists sections, social follow cards
+- [ ] TikTok and Instagram embeds
 - [ ] Tech series: building the Team Gondal platform in public (.NET, Next.js, Railway)
